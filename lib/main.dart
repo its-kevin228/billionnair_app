@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todoapp/mainScreen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -16,6 +16,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData.light(useMaterial3: true), home: MainScreen());
+        theme: ThemeData.dark(useMaterial3: true), home: const MainScreen());
   }
 }

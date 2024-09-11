@@ -18,7 +18,7 @@ class _AddTodoState extends State<AddTodo> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("Add todo:"),
+        const Text("Add todo:"),
         TextField(
           onSubmitted: (value) {
             if (todoText.text.isNotEmpty) {
@@ -28,7 +28,7 @@ class _AddTodoState extends State<AddTodo> {
           },
           autofocus: true,
           controller: todoText,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             contentPadding: EdgeInsets.all(5),
             hintText: "Write your todo here...",
           ),
@@ -40,7 +40,7 @@ class _AddTodoState extends State<AddTodo> {
               }
               todoText.text = "";
             },
-            child: Text("Add"))
+            child: const Text("Add"))
       ],
     );
   }

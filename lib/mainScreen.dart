@@ -23,14 +23,14 @@ class _MainScreenState extends State<MainScreen> {
           context: context,
           builder: (context) {
             return AlertDialog(
-              title: Text("Already exists"),
-              content: Text("This todo data already exists."),
+              title: const Text("Already exists"),
+              content: const Text("This todo data already exists."),
               actions: [
                 InkWell(
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Text("Close"))
+                    child: const Text("Close"))
               ],
             );
           });
@@ -71,7 +71,7 @@ class _MainScreenState extends State<MainScreen> {
           return Padding(
             padding: MediaQuery.of(context).viewInsets,
             child: Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               height: 200,
               child: AddTodo(addTodo: addTodo),
             ),
@@ -83,20 +83,20 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          shape: CircleBorder(),
-          backgroundColor: Colors.blueGrey[900],
-          child: Icon(Icons.add, color: Colors.white),
+          shape: const CircleBorder(),
+           backgroundColor: Color.fromARGB(255, 243, 246, 243),
+          child: const Icon(Icons.add, color: Color.fromARGB(255, 13, 13, 13)),
           onPressed: showAddTodoBottomSheet),
       drawer: Drawer(
           child: Column(
         children: [
           Container(
-            color: Colors.blueGrey[900],
+            color: Color.fromARGB(255, 102, 104, 105),
             height: 200,
             width: double.infinity,
-            child: Center(
+            child: const Center(
               child: Text(
-                "Todo App",
+                "Make Your List",
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
@@ -104,23 +104,23 @@ class _MainScreenState extends State<MainScreen> {
           ),
           ListTile(
               onTap: () {
-                launchUrl(Uri.parse("https://sujanpokhrelstc.netlify.app"));
+                launchUrl(Uri.parse("www.linkedin.com/in/pekpeli-gnimdou-kévin-102403249"));
               },
-              leading: Icon(Icons.person),
-              title: Text("About Me",
+              leading: const Icon(Icons.person),
+              title: const Text("About Me",
                   style: TextStyle(fontWeight: FontWeight.bold))),
           ListTile(
               onTap: () {
-                launchUrl(Uri.parse("mailto:someone@example.com"));
+                launchUrl(Uri.parse("pekpelignimdoukevin@gmail.com"));
               },
-              leading: Icon(Icons.email),
-              title: Text("Contact me",
+              leading: const Icon(Icons.email),
+              title: const Text("Contact me",
                   style: TextStyle(fontWeight: FontWeight.bold)))
         ],
       )),
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Todo App"),
+        title: const Text("Make Your List"),
       ),
       body: TodoListBuilder(
         todoList: todoList,
